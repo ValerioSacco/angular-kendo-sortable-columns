@@ -1,3 +1,4 @@
+<!-- the grid is sortable  -->
 <kendo-grid
   [kendoGridBinding]="gridView"
   [reorderable]="true"
@@ -6,6 +7,7 @@
   [pageSize]="pageSize"
   [resizable]="true"
 >
+  <!-- the checkbox column is not sortable and it must always be the first column -->
   <kendo-grid-checkbox-column
     [reorderable]="false"
     [sticky]="true"
@@ -14,6 +16,7 @@
     [columnMenu]="false"
     [minResizableWidth]="42"
   ></kendo-grid-checkbox-column>
+  <!-- the other columns must be sortable but they must not be the first column -->
   <kendo-grid-column
     [reorderable]="true"
     field="ID"
