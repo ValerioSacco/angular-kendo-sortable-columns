@@ -11,6 +11,8 @@ export class AppComponent implements OnInit {
   public gridData: ProductionOrder[] = orders;
   public gridView: ProductionOrder[] | undefined;
 
+  public pageSize: number = 3;
+
   ngOnInit(): void {
     this.gridView = this.gridData;
   }
